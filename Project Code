@@ -27,7 +27,7 @@ while True:
         print("Your annual net income is",annual_salary(net_income))
         if annual_salary(net_income)<=10000:
             print("Congratulations! You are poor!")
-        elif annual_salary(net_income)in range(10001,45000):
+        elif annual_salary(net_income)in range(10001,70000):
             print("Congratulations! You are middle-class!")
         else:
             print("Congratulations! You are rich!")

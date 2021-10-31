@@ -2,6 +2,7 @@
 #First we need to create an input for the user to input their gross income
 #I made the whole program a loop so that it would be easier to test different number inputs and so I could have definitive break points in the code
 while True:
+    result=0
     gross_income=float(input("Please enter this month's gross income. "))
     #These are the tax bracket calculations that will change based on the gross income input
     if gross_income<=0 :
@@ -31,7 +32,10 @@ while True:
             print("Congratulations! You are middle-class!")
         else:
             print("Congratulations! You are rich!")
+        time=int(input("How many years do you plan to continue working? "))
+        for x in range(time):
+            result+=annual_salary(net_income)
+        print("In",time,"years, you will have made",result,"dollars!")
     else:
         print("Goodbye")
         break
-    

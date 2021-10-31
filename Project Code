@@ -20,8 +20,8 @@ while True:
     net_income=float(gross_income)-float(gross_income)*tax_bracket
     #Print function will display to the user their net income 
     print("Your monthly net income is",net_income)
-    check=str(input("Would you like to know your annual net income? Press Y to continue or another key to terminate program. "))
-    if check==str("y" or "Y"):
+    check=str(input("Would you like to know your annual net income? Press y to continue or another key to terminate program. "))
+    if check==str("y"):
         def annual_salary(x):
             return(x*12)
         print("Your annual net income is",annual_salary(net_income))
@@ -34,3 +34,4 @@ while True:
     else:
         print("Goodbye")
         break
+    

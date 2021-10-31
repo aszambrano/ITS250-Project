@@ -17,7 +17,7 @@ while True:
     else:
         tax_bracket=.30
     #This will set up the cacluation to convert the user input into the net income output
-    net_income=int(float(gross_income))*tax_bracket
+    net_income=int(float(gross_income)-(int(float(gross_income))*tax_bracket))
     #Print function will display to the user their net income 
     print("Your monthly net income is",net_income)
     check=str(input("Would you like to know your annual net income? Press Y to continue or another key to terminate program. "))
@@ -34,4 +34,3 @@ while True:
     else:
         print("Goodbye")
         break
-    

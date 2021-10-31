@@ -3,8 +3,8 @@
 #I made the whole program a loop so that it would be easier to test different number inputs and so I could have definitive break points in the code
 while True:
     result=0
-    gross_income=float(input("Please enter this month's gross income. "))
-    #These are the tax bracket calculations that will change based on the gross income input
+    gross_income=float(input("Please enter this month's gross income: "))
+#These are the tax bracket calculations that will change based on the gross income input
     if gross_income<=0 :
         print("Invalid gross income. Please rerun program")
         break
@@ -17,15 +17,16 @@ while True:
         tax_bracket=.25
     else:
         tax_bracket=.30
-    #This will set up the cacluation to convert the user input into the net income output
+#This will set up the cacluation to convert the user input into the net income output
     net_income=float(gross_income)-float(gross_income)*tax_bracket
-    #Print function will display to the user their net income 
-    print("Your monthly net income is",net_income)
+#Print function will display to the user their net income
+#this will be sure user puts y to continue checking the string. If not it terminates.
+    print("Your monthly net income is:",net_income)
     check=str(input("Would you like to know your annual net income? Press y to continue or another key to terminate program. "))
     if check==str("y"):
         def annual_salary(x):
             return(x*12)
-        print("Your annual net income is",annual_salary(net_income))
+        print("Your annual net income is:",annual_salary(net_income))
         if annual_salary(net_income)<=10000:
             print("Congratulations! You are poor!")
         elif annual_salary(net_income)in range(10001,70000):
@@ -34,8 +35,9 @@ while True:
             print("Congratulations! You are rich!")
         time=int(input("How many years do you plan to continue working? "))
         for x in range(time):
+#we used this for loop to calculate the amount of someone whould earn inputed years. 
             result+=annual_salary(net_income)
         print("In",time,"years, you will have made",result,"dollars!")
     else:
-        print("Goodbye")
+        print("Goodbye!")
         break

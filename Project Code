@@ -1,0 +1,37 @@
+#Class Project
+#First we need to create an input for the user to input their gross income
+#I made the whole program a loop so that it would be easier to test different number inputs and so I could have definitive break points in the code
+while True:
+    gross_income=int(input("Please enter this month's gross income. "))
+    #These are the tax bracket calculations that will change based on the gross income input
+    if gross_income<=0 :
+        print("Invalid gross income. Please rerun program")
+        break
+#This is a break since there is no way to calculate net income if the gross income is a negative integer or 0 
+    elif gross_income<=25000 :
+        tax_bracket=.07
+    elif gross_income<=50000:
+        tax_bracket=.15
+    elif gross_income<=75000:
+        tax_bracket=.25
+    else:
+        tax_bracket=.30
+    #This will set up the cacluation to convert the user input into the net income output
+    net_income=int(float(gross_income))*tax_bracket
+    #Print function will display to the user their net income 
+    print("Your monthly net income is",net_income)
+    check=str(input("Would you like to know your annual net income? Press Y to continue or another key to terminate program. "))
+    if check==str("y" or "Y"):
+        def annual_salary(x):
+            return(x*12)
+        print("Your annual net income is",annual_salary(net_income))
+        if annual_salary(net_income)<=10000:
+            print("Congratulations! You are poor!")
+        elif 10000> annual_salary(net_income)<=45000:
+            print("Congratulations! You are middle-class!")
+        else:
+            print("Congratulations! You are rich!")
+    else:
+        print("Goodbye")
+        break
+    

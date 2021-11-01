@@ -35,7 +35,7 @@ while True:
             print("Congratulations! You are rich!")
         time=int(input("How many years do you plan to continue working? "))
         for x in range(time):
-#we used this for loop to calculate the amount of someone whould earn inputed years. 
+#we used this for loop to calculate the amount of money someone whould earn inputed years. 
             result+=annual_salary(net_income)
         print("In",time,"years, you will have made",result,"dollars!")
     else:
